@@ -106,8 +106,7 @@ class DataTransformation:
 
             return (
                 train_df_array,
-                test_df_array,
-                self.data_transformation_config.preprocessor_obj_path,
+                test_df_array
             )
 
         except Exception as e:

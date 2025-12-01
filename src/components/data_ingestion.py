@@ -9,6 +9,8 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformationConfig
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -52,11 +54,14 @@ class DataIngestion:
 if __name__ == "__main__":
     ingestion_obj = DataIngestion()
     transformation_obj = DataTransformation()
+    model_trainer_obj = ModelTrainer()
 
     train_path, test_path = ingestion_obj.initiate_data_ingestion()
 
-    transformation_obj.initiate_data_transformation(train_path, test_path)
+    train_df_array,test_df_array = transformation_obj.initiate_data_transformation(train_path, test_path)
 
+    get_score = model_trainer_obj.initiate_model_trainer(train_array = train_df_array,test_array=test_df_array)
+    print("Best model's R2 score: ", get_score)
 
 
 
