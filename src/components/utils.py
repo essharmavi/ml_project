@@ -10,6 +10,14 @@ from sklearn.model_selection import GridSearchCV
 from src.exception import CustomException
 
 
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise CustomException(error_message=e, error_detail=sys)
+
+
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
