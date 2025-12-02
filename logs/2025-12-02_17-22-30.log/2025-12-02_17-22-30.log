@@ -1,0 +1,15 @@
+[2025-12-02 17:22:31,363] 27 root - INFO - Entered the data ingestion component
+[2025-12-02 17:22:31,364] 30 root - INFO - Dataset read into dataframe
+[2025-12-02 17:22:31,365] 37 root - INFO - Train Test Split initiated
+[2025-12-02 17:22:31,368] 43 root - INFO - Ingestion completed
+[2025-12-02 17:22:31,369] 71 root - INFO - Training and Test dataset successfully read
+[2025-12-02 17:22:31,369] 73 root - INFO - Obtaining preprocessing object
+[2025-12-02 17:22:31,369] 37 root - INFO - Categorical features ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2025-12-02 17:22:31,369] 38 root - INFO - Numerical features ['writing_score', 'reading_score']
+[2025-12-02 17:22:31,369] 46 root - INFO - Numerical Columns standard scaling completed
+[2025-12-02 17:22:31,369] 54 root - INFO - Categorical Columns encoding ompleted
+[2025-12-02 17:22:31,369] 85 root - INFO - Applying preprocessing on training and test data
+[2025-12-02 17:22:31,374] 100 root - INFO - Preprocessing completed
+[2025-12-02 17:22:31,375] 36 root - INFO - Splitting training and test input data
+[2025-12-02 17:22:33,433] 63 root - INFO - Models report: {'Random Forest': 0.9779840563772395, 'Decision Tree': 0.9992925218704021, 'Gradient Boosting': 0.9019888751347023, 'Linear Regression': 0.8767065867355993, 'CatBoosting Regressor': 0.9545966863248692, 'AdaBoost Regressor': 0.8514281515382289, 'KNeighbors Regressor': 0.856329085633192}
+[2025-12-02 17:22:33,433] 75 root - INFO - Best model - Decision Tree

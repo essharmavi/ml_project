@@ -23,6 +23,7 @@ from src.components.utils import save_object, evaluate_model
 @dataclass
 class ModelTrainerConfig:
     model_path = os.path.join("artifacts", "model.pkl")
+    
 
 
 class ModelTrainer:
@@ -54,7 +55,6 @@ class ModelTrainer:
                 "AdaBoost Regressor": AdaBoostRegressor(),
                 "KNeighbors Regressor": KNeighborsRegressor(),
             }
-
             models_report: dict = evaluate_model(
                 X_train=X_train, Y_train=Y_train, X_test=X_test, Y_test=Y_test, models=models
             )
